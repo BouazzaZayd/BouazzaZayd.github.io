@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zayd Bouazza - Ingénieur Cybersécurité</title>
+    <link rel="stylesheet" href="styles-enhanced.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">&lt;ZB /&gt;</div>
+            <div class="loader-progress">
+                <div class="loader-bar"></div>
+            </div>
+            <p class="loader-text">Initialisation du système...</p>
+        </div>
+    </div>
+
+    <div class="scroll-progress" id="scroll-progress">
+        <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">ZAYD.SEC</span>
+                <span class="logo-subtitle">Portfolio</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active" data-section="home"><i class="fas fa-terminal"></i>
+                        <span>home</span></a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects"><i class="fas fa-network-wired"></i>
+                        <span>opérations</span></a></li>
+                <li><a href="#skills" class="nav-link" data-section="skills"><i class="fas fa-shield-alt"></i>
+                        <span>arsenal</span></a></li>
+                <li><a href="#certifications" class="nav-link" data-section="certifications"><i
+                            class="fas fa-certificate"></i>
+                        <span>certifications</span></a></li>
+                <li><a href="#education" class="nav-link" data-section="education"><i class="fas fa-graduation-cap"></i>
+                        <span>académique</span></a></li>
+                <li><a href="#experience" class="nav-link" data-section="experience"><i class="fas fa-briefcase"></i>
+                        <span>expérience</span></a></li>
+                <li><a href="#activities" class="nav-link" data-section="activities"><i
+                            class="fas fa-hand-holding-heart"></i>
+                        <span>engagement</span></a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact"><i class="fas fa-envelope"></i>
+                        <span>connexion</span></a></li>
+            </ul>
+            <div class="nav-actions" style="display: flex; align-items: center; gap: 1rem;">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <canvas id="particles-canvas" class="particles-canvas"></canvas>
+
+    <section id="home" class="hero section-active">
+
+        <div class="particles-canvas" id="particles-canvas"></div>
+
+        <div class="hero-background">
+            <div class="gradient-overlay"></div>
+            <div class="animated-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-image-container">
+                <div class="image-wrapper">
+                    <div class="image-glow"></div>
+                    <img src="assets/profile.png" alt="Zayd Bouazza" class="hero-image">
+                    <div class="image-border"></div>
+                </div>
+            </div>
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <span class="badge-text">Disponible pour Alternance (Sept. 2026)</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="greeting typing-text">chmod +x zayd.sh && ./zayd.sh</span>
+                    <br>
+                    <span class="name animated-gradient">Zayd Bouazza</span>
+                </h1>
+                <p class="hero-subtitle">
+                    <span class="subtitle-line">Élève-Ingénieur en Cybersécurité</span>
+                </p>
+                <p class="hero-description fade-in-up">
+                    Passionné par la cybersécurité opérationnelle (Blue & Red Team).
+                    Spécialisé dans l'analyse de logs, le durcissement système et l'investigation numérique.
+                </p>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="24">0</div>
+                        <div class="stat-label">Jours Streak (AoC)</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="100">0</div>
+                        <div class="stat-label">% Pré-Security</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="2">0</div>
+                        <div class="stat-label">Projets Majeurs</div>
+                    </div>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary btn-animated">
+                        <span>Me Recruter</span>
+                        <i class="fas fa-terminal"></i>
+                    </a>
+                    <a href="CV-Zayd-BOUAZZA.pdf" download="CV-Zayd-BOUAZZA.pdf" class="btn btn-secondary btn-animated">
+                        <span>Télécharger CV</span>
+                        <i class="fas fa-download"></i>
+                    </a>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/zayd-bouazza-300420306/" class="social-link" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="mailto:bouazzazayd03@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                    <a href="https://tryhackme.com/p/zayd.bouazza" class="social-link" target="_blank"
+                        title="TryHackMe"><i class="fas fa-user-secret"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">Initialisation</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description fade-in-up">
+                        Actuellement étudiant à l'<strong>INSA Centre-Val de Loire</strong> en Sécurité et Technologies
+                        Informatiques,
+                        je développe une approche rigoureuse de la protection des systèmes d'information.
+                    </p>
+                    <p class="about-description fade-in-up">
+                        Formé par la pratique intensive sur des plateformes comme <strong>TryHackMe</strong>, je combine
+                        des compétences
+                        en défense (Blue Team : Splunk, Forensics) et en attaque (Red Team : OWASP, Active Directory)
+                        pour mieux sécuriser les infrastructures. Mon attrait pour le développement et l'architecture
+                        système (C, Python) me permet d'analyser les vulnérabilités en profondeur.
+                    </p>
+                    <p class="about-description fade-in-up">
+                        C'est avec cette rigueur technique que je souhaite intégrer vos équipes en alternance dès
+                        septembre 2026.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">Opérations & Projets</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span class="tech-tag">Active Directory</span>
+                                <span class="tech-tag">Red Team</span>
+                                <span class="tech-tag">Blue Team</span>
+                            </div>
+                        </div>
+                        <div class="project-icon"><i class="fas fa-server"></i></div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Audit & Sécurisation Active Directory</h3>
+                        <p class="project-description">
+                            Simulation d'attaques (LLMNR, SMB Relay) et post-compromission pour identifier les failles.
+                            Mise en place de mesures de durcissement (Hardening) et surveillance des logs.
+                        </p>
+                        <div class="project-tools">
+                            <span>Kerberos</span>
+                            <span>GPO</span>
+                            <span>Powershell</span>
+                            <span>Mimikatz</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Pygame</span>
+                                <span class="tech-tag">Algorithmique</span>
+                            </div>
+                        </div>
+                        <div class="project-icon"><i class="fas fa-gamepad"></i></div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Moteur de Jeu Stratégique 2.5D</h3>
+                        <p class="project-description">
+                            Développement complet d'un moteur isométrique optimisé (60 FPS).
+                            Implémentation d'IA avancée (Pathfinding), gestion de 100+ entités et architecture
+                            logicielle robuste.
+                        </p>
+                        <div class="project-tools">
+                            <span>Python</span>
+                            <span>Maths Vectorielles</span>
+                            <span>Optimisation</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span class="tech-tag">C</span>
+                                <span class="tech-tag">Système</span>
+                                <span class="tech-tag">OS</span>
+                            </div>
+                        </div>
+                        <div class="project-icon"><i class="fas fa-terminal"></i></div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Développement d'un Mini-Shell Unix</h3>
+                        <p class="project-description">
+                            Conception d'un interpréteur de commandes interactif en C. Implémentation de fonctions
+                            système personnalisées (gestion de fichiers avec opendir et readdir), manipulation des
+                            processus et automatisation de la compilation via Makefile. Une approche bas niveau
+                            essentielle pour comprendre le cœur de l'OS et l'analyse de vulnérabilités.
+                        </p>
+                        <div class="project-tools">
+                            <span>C</span>
+                            <span>Appels-Système</span>
+                            <span>Linux</span>
+                            <span>Makefile</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Arsenal Technique</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category" data-aos="fade-up">
+                    <h3 class="category-title"><i class="fas fa-shield-alt"></i> Sécurité & Défense</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-header"><span class="skill-name">Analyse de logs (Splunk)</span><span
+                                    class="skill-percentage">80%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header"><span class="skill-name">Pentest Web (OWASP Top 10)</span><span
+                                    class="skill-percentage">70%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header"><span class="skill-name">Forensics & Malware Analysis</span><span
+                                    class="skill-percentage">65%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="65"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header"><span class="skill-name">Cloud Security (AWS)</span><span
+                                    class="skill-percentage">60%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="60"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up">
+                    <h3 class="category-title"><i class="fas fa-laptop-code"></i> Sys & Dev</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-header"><span class="skill-name">Linux (Kali, Ubuntu) / Bash</span><span
+                                    class="skill-percentage">90%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header"><span class="skill-name">Python (Scripting/Auto)</span><span
+                                    class="skill-percentage">85%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header"><span class="skill-name">Réseaux (TCP/IP, DNS, HTTP)</span><span
+                                    class="skill-percentage">85%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header"><span class="skill-name">C / Java / SQL</span><span
+                                    class="skill-percentage">75%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category" data-aos="fade-up">
+                    <h3 class="category-title"><i class="fas fa-language"></i> Langues</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Anglais</span>
+                                <span class="skill-percentage" style="display: inline-block;">Professionnel &
+                                    Technique</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Français</span>
+                                <span class="skill-percentage" style="display: inline-block;">Bilingue</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Arabe</span>
+                                <span class="skill-percentage" style="display: inline-block;">Langue maternelle</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="section certifications-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Certifications & Labs</h2>
+                <div class="section-line"></div>
+            </div>
+            <!-- Content directly in container to match "Initialisation" style (no card) -->
+            <div class="skills-grid" style="max-width: 800px; margin: 0 auto;">
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">TryHackMe - Pre Security <i class="fas fa-check-circle"
+                                style="color: var(--primary-color); margin-left: 5px;"></i></span>
+                        <span class="skill-percentage">100%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="100"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Advent of Cyber 2025<i class="fas fa-check-circle"
+                                style="color: var(--primary-color); margin-left: 5px;"></i></span>
+                        <span class="skill-percentage">24 jours</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="100"></div>
+                        <!-- Assuming 100% for 24 days completion -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="section education-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <h2 class="section-title">Parcours Académique</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"><i class="fas fa-university"></i></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2025 - 2028 (En cours)</div>
+                        <h3 class="timeline-title">Ingénieur Sécurité & Technologies Informatiques</h3>
+                        <p class="timeline-institution">INSA Centre-Val de Loire, Bourges</p>
+                        <p class="timeline-description">Spécialisation en cybersécurité, cryptographie et administration
+                            système.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"><i class="fas fa-book"></i></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023 - 2025</div>
+                        <h3 class="timeline-title">Cycle Préparatoire</h3>
+                        <p class="timeline-institution">École Nationale des Sciences Appliquées (ENSA)</p>
+                        <p class="timeline-description">Formation scientifique exigeante (Mathématiques, Physique,
+                            Sciences de l'Ingénieur).</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"><i class="fas fa-laptop"></i></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2022 - 2023</div>
+                        <h3 class="timeline-title">DUT Génie Informatique</h3>
+                        <p class="timeline-institution">École Supérieure de Technologie (EST), Oujda</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2022</div>
+                        <h3 class="timeline-title">Baccalauréat en Sciences Physiques</h3>
+                        <p class="timeline-institution">Lycée El Qadi Bnou El Arabi</p>
+                        <p class="timeline-description">Obtenu avec la Mention Très Bien.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section experience-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">06</span>
+                <h2 class="section-title">Expérience Professionnelle</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="experience-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div class="experience-icon"><i class="fas fa-code-branch"></i></div>
+                        <div class="experience-meta">
+                            <span class="experience-date">2024 (1 mois)</span>
+                            <span class="experience-type">Oujda</span>
+                        </div>
+                    </div>
+                    <h3 class="experience-title">Stage Développement Logiciel</h3>
+                    <p class="experience-company">Société KPI</p>
+                    <ul class="experience-list">
+                        <li>Conception et développement d'une application de gestion de matériel.</li>
+                        <li>Travail en environnement structuré, respect de la logique applicative
+                            (HTML/CSS/JavaScript/PHP).</li>
+                        <li>Sensibilisation aux bases de la sécurité applicative.</li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div class="experience-icon"><i class="fas fa-pen-nib"></i></div>
+                        <div class="experience-meta">
+                            <span class="experience-date">2023 (2 mois)</span>
+                            <span class="experience-type">Oujda</span>
+                        </div>
+                    </div>
+                    <h3 class="experience-title">Stage Conception Graphique</h3>
+                    <p class="experience-company">AMYAS COM</p>
+                    <ul class="experience-list">
+                        <li>Création et déclinaison de divers supports visuels et graphiques (logos, affiches,
+                            maquettes, etc.).</li>
+                        <li>Respect des délais et rigueur technique.</li>
+                        <li>Travail sous contraintes clients.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="activities" class="section activities-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">07</span>
+                <h2 class="section-title">Engagement</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+                <div class="activity-card" data-aos="fade-up">
+                    <div class="activity-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    <h3 class="activity-title">Bénévole</h3>
+                    <p class="activity-org">Association ADSRO (Don du Sang)</p>
+                    <p style="margin-top:10px; color:var(--text-secondary)">Depuis 2017 - Organisation d'actions de
+                        sensibilisation et collectes.</p>
+                </div>
+                <div class="activity-card" data-aos="fade-up">
+                    <div class="activity-icon"><i class="fas fa-hiking"></i></div>
+                    <h3 class="activity-title">Membre</h3>
+                    <p class="activity-org">Association RAMO (Randonnées et Arts Maroc Oriental)</p>
+                    <p style="margin-top:10px; color:var(--text-secondary)">2024 - Engagement associatif.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">08</span>
+                <h2 class="section-title">Initialiser la connexion</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-details">
+                            <h3>Base</h3>
+                            <p>Bourges, France</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <a href="mailto:bouazzazayd03@gmail.com">bouazzazayd03@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div class="contact-details">
+                            <h3>Téléphone</h3>
+                            <a href="tel:+33765518244">07 65 51 82 44</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Zayd Bouazza. <span style="color:var(--primary-color)">System Secured.</span></p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Side Navigation Dots -->
+    <div class="side-nav"></div>
+
+    <script src="script-enhanced.js"></script>
+</body>
+
+</html>
