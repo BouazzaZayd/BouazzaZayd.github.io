@@ -611,6 +611,23 @@
                     <li><strong>Post-Compromission :</strong> Exploitation des faiblesses Kerberos (Kerberoasting) et
                         dump d'identifiants en mémoire avec <strong>Mimikatz</strong> (Pass-the-Hash, DCSync).</li>
                 </ul>
+
+                <h3>🔵 Phase 2 : Logique de défenseur (Blue Team & IAM)</h3>
+                <ul>
+                    <li><strong>Hygiène réseau :</strong> Désactivation des protocoles obsolètes (SMBv1, LLMNR) pour
+                        neutraliser les empoisonnements.</li>
+                    <li><strong>Gouvernance IAM :</strong> Refonte de la gestion des accès via la politique du moindre
+                        privilège et restriction des groupes d'administrateurs.</li>
+                    <li><strong>Durcissement (Hardening) :</strong> Déploiement de GPO pour automatiser la sécurité
+                        (protection LSA, Credential Guard) contre les outils comme Mimikatz.</li>
+                    <li><strong>Automatisation :</strong> Scripts <strong>PowerShell</strong> pour auditer les
+                        configurations et automatiser la remédiation.</li>
+                </ul>
+
+                <h3>💡 Ce que j'en ai retenu</h3>
+                <p>On ne peut défendre efficacement un réseau que si l'on comprend comment il est attaqué. Ce projet m'a
+                    prouvé qu'une gestion des identités (IAM) rigoureuse est le rempart le plus efficace face aux
+                    mouvements latéraux.</p>
             </div>
         </div>
     </div>
