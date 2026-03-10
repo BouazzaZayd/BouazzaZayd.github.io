@@ -182,13 +182,17 @@
                 <div class="section-line"></div>
             </div>
             <div class="projects-grid">
-                <div class="project-card" data-aos="fade-up">
+                <div class="project-card clickable-card" data-aos="fade-up" onclick="openModal('modal-ad')"
+                    style="cursor: pointer;">
+                    <div class="project-hover-action">
+                        <span><i class="fas fa-search"></i> Explorer</span>
+                    </div>
                     <div class="project-image">
                         <div class="project-overlay">
                             <div class="project-tech">
                                 <span class="tech-tag">Active Directory</span>
-                                <span class="tech-tag">Red Team</span>
-                                <span class="tech-tag">Blue Team</span>
+                                <span class="tech-tag">IAM</span>
+                                <span class="tech-tag">Red/Blue Team</span>
                             </div>
                         </div>
                         <div class="project-icon"><i class="fas fa-server"></i></div>
@@ -196,50 +200,56 @@
                     <div class="project-content">
                         <h3 class="project-title">Audit & Sécurisation Active Directory</h3>
                         <p class="project-description">
-                            Simulation d'attaques (LLMNR, SMB Relay) et post-compromission pour identifier les failles.
-                            Mise en place de mesures de durcissement (Hardening) et surveillance des logs.
+                            Simulation d'attaques complexes (Empoisonnement, Pass-the-Hash) pour cartographier les
+                            vulnérabilités via Bloodhound. Application d'une stratégie de défense IAM (Moindre
+                            privilège, GPO, PowerShell) et durcissement système (Secure by Design).
                         </p>
                         <div class="project-tools">
-                            <span>Kerberos</span>
-                            <span>GPO</span>
-                            <span>Powershell</span>
+                            <span>Bloodhound</span>
+                            <span>PowerShell</span>
                             <span>Mimikatz</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card" data-aos="fade-up">
+                <div class="project-card clickable-card" data-aos="fade-up" onclick="openModal('modal-medievall')"
+                    style="cursor: pointer;">
+                    <div class="project-hover-action">
+                        <span><i class="fas fa-search"></i> Explorer</span>
+                    </div>
                     <div class="project-image">
                         <div class="project-overlay">
                             <div class="project-tech">
                                 <span class="tech-tag">Python</span>
                                 <span class="tech-tag">Pygame</span>
-                                <span class="tech-tag">Algorithmique</span>
+                                <span class="tech-tag">Optimisation</span>
                             </div>
                         </div>
                         <div class="project-icon"><i class="fas fa-gamepad"></i></div>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Moteur de Jeu Stratégique 2.5D</h3>
+                        <h3 class="project-title">MedievAll bAlttle GenerAll!</h3>
                         <p class="project-description">
-                            Développement complet d'un moteur isométrique optimisé (60 FPS).
-                            Implémentation d'IA avancée (Pathfinding), gestion de 100+ entités et architecture
-                            logicielle robuste.
+                            Développement de A à Z d'un jeu de simulation 2.5D. Création d'un moteur isométrique
+                            optimisé à 60 FPS en Python avec Pygame, et travail de recherche sur l'algorithmique d'IA.
                         </p>
                         <div class="project-tools">
-                            <span>Python</span>
-                            <span>Maths Vectorielles</span>
-                            <span>Optimisation</span>
+                            <span>Algorithmique</span>
+                            <span>POO</span>
                         </div>
                     </div>
                 </div>
-                <div class="project-card" data-aos="fade-up">
+                <div class="project-card clickable-card" data-aos="fade-up" onclick="openModal('modal-shell')"
+                    style="cursor: pointer;">
+                    <div class="project-hover-action">
+                        <span><i class="fas fa-search"></i> Explorer</span>
+                    </div>
                     <div class="project-image">
                         <div class="project-overlay">
                             <div class="project-tech">
                                 <span class="tech-tag">C</span>
-                                <span class="tech-tag">Système</span>
                                 <span class="tech-tag">OS</span>
+                                <span class="tech-tag">Architecture</span>
                             </div>
                         </div>
                         <div class="project-icon"><i class="fas fa-terminal"></i></div>
@@ -247,13 +257,12 @@
                     <div class="project-content">
                         <h3 class="project-title">Développement d'un Mini-Shell Unix</h3>
                         <p class="project-description">
-                            Conception d'un interpréteur de commandes interactif en C. Implémentation de fonctions
-                            système personnalisées (gestion de fichiers avec opendir et readdir), manipulation des
-                            processus et automatisation de la compilation via Makefile. Une approche bas niveau
-                            essentielle pour comprendre le cœur de l'OS et l'analyse de vulnérabilités.
+                            Conception d'un interpréteur de commandes interactif en C via la manipulation directe
+                            d'appels système POSIX (fork, exec, opendir). Une plongée dans l'architecture bas niveau,
+                            étape indispensable pour comprendre le cœur de l'OS, la gestion de la mémoire et l'analyse
+                            de vulnérabilités complexes.
                         </p>
                         <div class="project-tools">
-                            <span>C</span>
                             <span>Appels-Système</span>
                             <span>Linux</span>
                             <span>Makefile</span>
@@ -576,6 +585,123 @@
 
     <!-- Side Navigation Dots -->
     <div class="side-nav"></div>
+
+    <!-- Modal AD -->
+    <div id="modal-ad" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Fermer" onclick="closeModal('modal-ad')"><i
+                    class="fas fa-times"></i></button>
+            <div class="modal-header">
+                <h2>Audit & Sécurisation Active Directory</h2>
+            </div>
+            <div class="modal-body markdown-content">
+                <h3>🎯 L'objectif du projet</h3>
+                <p>L'Active Directory est le cœur de la gestion des identités (IAM), ce qui en fait la cible n°1 des
+                    attaquants. L'objectif était de construire un lab d'entreprise réaliste. Mon approche : attaquer
+                    l'infrastructure pour comprendre le raisonnement d'un pirate, puis appliquer des mesures de
+                    durcissement concrètes pour verrouiller le système.</p>
+
+                <h3>🔴 Phase 1 : Logique d'attaquant (Red Team)</h3>
+                <ul>
+                    <li><strong>Vecteurs initiaux :</strong> Interception du trafic via des attaques LLMNR/NBT-NS
+                        Poisoning et relais d'authentification (SMB Relay, MITM6).</li>
+                    <li><strong>Cartographie :</strong> Utilisation de <strong>BloodHound</strong> pour analyser la
+                        théorie des graphes de l'AD et identifier les chemins de compromission vers les comptes à hauts
+                        privilèges.</li>
+                    <li><strong>Post-Compromission :</strong> Exploitation des faiblesses Kerberos (Kerberoasting) et
+                        dump d'identifiants en mémoire avec <strong>Mimikatz</strong> (Pass-the-Hash, DCSync).</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Mini-Shell -->
+    <div id="modal-shell" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Fermer" onclick="closeModal('modal-shell')"><i
+                    class="fas fa-times"></i></button>
+            <div class="modal-header">
+                <h2>Développement d'un Mini-Shell Unix</h2>
+            </div>
+            <div class="modal-body markdown-content">
+                <h3>🎯 L'objectif du projet</h3>
+                <p>En cybersécurité, on ne peut ni protéger ni exploiter ce que l'on ne comprend pas intimement.
+                    L'objectif de ce projet était de recoder de zéro un interpréteur de commandes Unix en C pour
+                    démystifier la couche qui sépare l'utilisateur du noyau (Kernel). Il s'agissait de manipuler l'OS
+                    sans l'aide de surcouches haut niveau.</p>
+
+                <h3>⚙️ Architecture & Implémentation</h3>
+                <ul>
+                    <li><strong>Interpréteur & Parsing :</strong> Conception de la boucle d'interaction principale
+                        capable d'analyser les entrées utilisateur et de les traduire en instructions compréhensibles
+                        par la machine.</li>
+                    <li><strong>Gestion des Processus :</strong> Création, exécution et synchronisation des processus
+                        enfants via la maîtrise des appels système POSIX fondamentaux (<code>fork()</code>,
+                        <code>execvp()</code>, <code>wait()</code>).
+                    </li>
+                    <li><strong>Interaction Système Directe :</strong> Implémentation de fonctions natives
+                        personnalisées en dialoguant directement avec l'OS (ex: recréation de la logique de parcours de
+                        répertoires avec <code>opendir</code> et <code>readdir</code>).</li>
+                    <li><strong>Qualité du code :</strong> Structuration modulaire du code C et automatisation de la
+                        compilation rigoureuse via <code>Makefile</code>.</li>
+                </ul>
+
+                <h3>🛡️ L'enjeu Cybersécurité (Pourquoi ce projet ?)</h3>
+                <p>Au-delà du développement pur, ce projet est un socle pour la sécurité offensive et défensive :</p>
+                <ul>
+                    <li><strong>Compréhension des vulnérabilités :</strong> Maîtriser la façon dont un programme C
+                        alloue et gère sa mémoire est la première étape pour comprendre, identifier et exploiter des
+                        failles de corruption mémoire (Buffer Overflow, Format String).</li>
+                    <li><strong>Analyse comportementale :</strong> Comprendre comment les processus sont générés et
+                        comment ils font appel au système (Syscalls) est essentiel pour analyser le comportement des
+                        malwares (Reverse Engineering) ou comprendre l'élévation de privilèges.</li>
+                </ul>
+
+                <h3>💡 Ce que j'en ai retenu</h3>
+                <p>Ce projet m'a force à adopter une rigueur absolue, le langage C ne pardonnant aucune erreur de
+                    segmentation (Segfault). Il m'a permis de passer d'une vision abstraite du système d'exploitation à
+                    une compréhension technique concrète de son architecture et de ses points de défaillance.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal MedievAll -->
+    <div id="modal-medievall" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Fermer" onclick="closeModal('modal-medievall')"><i
+                    class="fas fa-times"></i></button>
+            <div class="modal-header">
+                <h2>MedievAll bAlttle GenerAll!</h2>
+            </div>
+            <div class="modal-body markdown-content">
+                <h3>Le Projet : MedievAll bAlttle GenerAll!</h3>
+                <p>L'objectif était de créer un jeu de simulation de toutes pièces, sans utiliser de moteur préconçu.
+                    J'ai donc développé un moteur isométrique 2.5D complet, programmé entièrement en Python avec la
+                    bibliothèque Pygame.</p>
+
+                <div style="display: flex; gap: 1rem; margin: 1.5rem 0;">
+                    <img src="assets/photo1.png" alt="Capture 1 du jeu MedievAll bAlttle GenerAll!"
+                        style="width: calc(50% - 0.5rem); border-radius: 8px; border: 1px solid var(--border-color); box-shadow: var(--shadow-md); object-fit: cover;">
+                    <img src="assets/photo2.png" alt="Capture 2 du jeu MedievAll bAlttle GenerAll!"
+                        style="width: calc(50% - 0.5rem); border-radius: 8px; border: 1px solid var(--border-color); box-shadow: var(--shadow-md); object-fit: cover;">
+                </div>
+
+                <h3>Les Défis Techniques : Moteur et Algorithmique</h3>
+                <p>Le véritable défi de ce projet a été la gestion des performances. Il a fallu optimiser drastiquement
+                    le code mathématique et la gestion de la mémoire pour transformer une grille logique en un affichage
+                    isométrique fluide à 60 FPS.</p>
+                <p>Le projet a également impliqué un gros travail de recherche et de test sur les algorithmes de
+                    Pathfinding (comme le A-Star) pour tenter de gérer les déplacements d'un grand nombre d'entités
+                    simultanées. C'est un excellent exercice pour se confronter aux limites d'un langage !</p>
+
+                <h3>Le lien avec l'ingénierie</h3>
+                <p>Développer la base d'un jeu exige une rigueur absolue sur l'allocation mémoire et la structure du
+                    code (POO). Savoir écrire un code Python propre et comprendre la complexité algorithmique sous de
+                    fortes contraintes de performances est une compétence essentielle, y compris pour concevoir des
+                    scripts d'infrastructure et de sécurité qui ne surchargeront jamais un système.</p>
+            </div>
+        </div>
+    </div>
 
     <script src="script-enhanced.js"></script>
 </body>
